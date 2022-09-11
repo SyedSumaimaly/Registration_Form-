@@ -1,3 +1,46 @@
-#Picture{
+#Picture {
     display: none;
+
+}
+
+.img_div {
+    border: 2px dotted black;
+    padding: 5%;
+    width: 14%;
+}
+
+.reg_head {
+    text-align: center;
+}
+
+.main_reg {
+    background-color: antiquewhite;
+    padding: 3em;
+}
+
+.form {
+    /* border: 2px solid black; */
+    padding: 2.5em;
+    border-radius: 10px;
+}
+
+.input1 {
+    width: 80%;
+    padding: 0.2em;
+    border-radius: 5px;
+}
+
+.bt{
+    width: 92%;
+    text-align: center;
+    padding: 0.3em;
+    margin-top: 5%;
+    border-radius: 10px;
+}
+
+.input2 {
+    width: 92.5%;
+    padding: 0.2em;
+    border-radius: 5px;
+
 }
