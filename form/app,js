@@ -1,0 +1,49 @@
+function saveData() {
+    var firstName = document.getElementById("FirstName").value;
+    var lastName = document.getElementById("LastName").value;
+    var email = document.getElementById("Email").value;
+    var city = document.getElementById("City").value;
+    var course = document.getElementById("Course").value;
+    var dateOfBirth = document.getElementById("DOB").value;
+    var Gen = document.getElementById("gender").value
+    var male = document.getElementById("Male").value;
+    var female = document.getElementById("Female").value;
+    var cnic = document.getElementById("CNIC").value;
+    var fatherCnic = document.getElementById("fCNIC").value;
+    var address = document.getElementById("Address").value;
+    var lastqualification = document.getElementById("lastQualification").value;
+    var picture = document.getElementById("Picture").value;
+    const Img = document.getElementById("Picture");
+    var uploadImg = "";
+
+    Img.addEventListener("change", function () {
+        const reader = new FileReader();
+        readre.addEventListener("load", () => {
+            uploadImg = reader.result;
+            document.getElementById("display_img").style.backgroundImage = `url(${uploadImg})`;
+        });
+        reader.readAsDataURL(this.files[0]);
+    });
+
+    var user = {
+        firstname: firstName,
+        lastname: lastName,
+        Email: email,
+        City: city,
+        Course: course,
+        DOB: dateOfBirth,
+        Gender: Gen,
+        CNIC: cnic,
+        FCNIC: fatherCnic,
+        Add: address,
+        LastQualification: lastqualification,
+        Pic: img ,
+    };
+
+    var json = JSON.stringify(user);
+    localStorage.setItem(user, json);
+    console.log('user added');
+
+
+};
+
